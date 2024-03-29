@@ -59,21 +59,6 @@ class MLPCont(nn.Module):
         pi_distribution = Normal(mu, std)
         logp_pi = pi_distribution.log_prob(actions).sum(axis=-1)
         return logp_pi
-class Actor(nn.Module):
-    def __init__(self, state_dim, action_dim, max_action=1.0, phi=0.05):
-        super(Actor, self).__init__()
-        self.l1 = nn.Linear(state_dim + action_dim, 256)
-        self.l2 = nn.Linear(256, 256)
-        self.l3 = nn.Linear(256, action_dim)
-        self.max_action = max_action
-        self.phi = phi
-
-    def forward(self, state, action):
-        sa = torch.cat([state, action], 1)
-        a = F.relu(self.l1(sa))
-        a = F.relu(self.l2(a))
-        a = self.phi * self.max_action * torch.tanh(self.l3(a))
-        return (a+action).clamp(-self.max_action,self.max_action)
 class A2PR_Actor(nn.Module):
     def __init__(self, state_dim, action_dim, max_action=1.0):
         super(A2PR_Actor, self).__init__()
