@@ -1,6 +1,6 @@
 # Adaptive Advantage-guided Policy Regularization for Offline Reinforcement Learning
 
-Code for ICML'24 submitted paper "Adaptive Advantage-guided Policy Regularization for Offline Reinforcement Learning".
+Code for ICML'24 paper "Adaptive Advantage-guided Policy Regularization for Offline Reinforcement Learning".
 
 If you find this repository useful for your research, please cite.
 

@@ -83,7 +83,6 @@ class InSampleAC(base.Agent):
         self.beh_pi_optimizer = torch.optim.Adam(list(self.beh_pi.parameters()), learning_rate)
         self.exp_threshold = 10000
 
-        # 得到q的值
         if discrete_control:
             self.get_q_value = self.get_q_value_discrete
             self.get_q_value_target = self.get_q_value_target_discrete
