@@ -1,8 +1,18 @@
 # Adaptive Advantage-guided Policy Regularization for Offline Reinforcement Learning
 
-Code for ICML'24 paper "Adaptive Advantage-guided Policy Regularization for Offline Reinforcement Learning".
+This repo is the official implementation of ICML'24 paper "Adaptive Advantage-guided Policy Regularization for Offline Reinforcement Learning".
 
-If you find this repository useful for your research, please cite.
+If you find this repository useful for your research, please cite:
+
+```bib
+@inproceedings{
+    A2PR,
+    title={Adaptive Advantage-guided Policy Regularization for Offline Reinforcement Learning},
+    author={Tenglong Liu and Yang Li and Yixing Lan and Hao Gao and Wei Pan and Xin Xu},
+    booktitle={International Conference on Machine Learning},
+    year={2024}
+}
+```
 
 ## Install dependency
 
