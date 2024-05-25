@@ -1,7 +1,8 @@
 import numpy as np
 import time
 import os
-import d4rl
+import d4rl.gym_mujoco
+# import d4rl
 
 from utils.eval import eval_policy
 from utils.config import get_config, save_config
@@ -10,7 +11,8 @@ from utils.buffer import ReplayBuffer
 from A2PR import A2PR
 from utils import utils_spot
 
-# import soinn
+# os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
+
 
 if __name__ == "__main__":
     start_time = time.time()
@@ -39,7 +41,9 @@ if __name__ == "__main__":
         + "-vae_weight"
         + str(args.vae_weight)
         + "-mask"
-        + str(args.mask),
+        + str(args.mask)
+        + "-discount"
+        + str(args.discount),
     )
 
     writer = get_writer(result_dir)
@@ -54,7 +58,7 @@ if __name__ == "__main__":
     save_config(args, os.path.join(result_dir, "config.txt"))
 
     # save src
-    utils_spot.snapshot_src('.', os.path.join(result_dir, 'src'), '.gitignore')
+    # utils_spot.snapshot_src('.', os.path.join(result_dir, 'src'), '.gitignore')
 
     # load model
     if args.load_model != "default":
