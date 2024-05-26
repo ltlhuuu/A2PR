@@ -2,6 +2,7 @@ import numpy as np
 import time
 import os
 import d4rl.gym_mujoco
+# For different version install, you may change the 'import' way
 # import d4rl
 
 from utils.eval import eval_policy
@@ -69,7 +70,9 @@ if __name__ == "__main__":
     os.makedirs(ckpt_dir, exist_ok=True)
     model_path = os.path.join(ckpt_dir, model_name + ".pth")
     replay_buffer = ReplayBuffer(kwargs["state_dim"], kwargs["action_dim"], args.device, args.env_id, args.scale, args.shift)
-    replay_buffer.convert_D4RL(d4rl.qlearning_dataset(env))
+    dataset = d4rl.qlearning_dataset(env)
+    replay_buffer.D4RL_convert(dataset)
+
     if args.normalize:
         mean, std = replay_buffer.normalize_states()
     else:
@@ -80,10 +83,12 @@ if __name__ == "__main__":
 
     # define policy
     policy = A2PR(**kwargs)
+    # save evaluation results
     evaluations = []
     evaluation_path = os.path.join(result_dir, file_name + ".npy")
     if os.path.exists(model_path):
         policy.load(model_path)
+
     for t in range(int(args.max_timesteps)):
         result = policy.train(replay_buffer, args.batch_size)
         for key, value in result.items():

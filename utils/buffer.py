@@ -46,7 +46,7 @@ class ReplayBuffer(object):
         
         return transition
 
-    def convert_D4RL(self, dataset):
+    def D4RL_convert(self, dataset):
         self.state = dataset["observations"]
         self.action = dataset["actions"]
         self.next_state = dataset["next_observations"]

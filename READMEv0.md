@@ -52,7 +52,7 @@ python main.py   --env_id halfcheetah-medium-v2 --alpha 40.0 --vae_weight 1.0 --
 
 python main.py   --env_id halfcheetah-medium-replay-v2 --alpha 40.0 --vae_weight 1.5 --device cuda:0 --mask 0.8 --discount 0.995 --seed 0
 
-python main.py   --env_id halfcheetah-medium-expert-v2 --alpha 40.0 --vae_weight 1.0 --device cuda:0 --mask 10.0 --discount 0.99 --seed 0
+python main.py   --env_id halfcheetah-medium-expert-v2 --alpha 40.0 --vae_weight 1.0 --device cuda:0 --mask 15.0 --discount 0.99 --seed 0
 
 
 python main.py   --env_id walker2d-medium-v2 --alpha 2.5 --vae_weight 1.5 --device cuda:0 --mask 1.0 --discount 0.99 --seed 0
