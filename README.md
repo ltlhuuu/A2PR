@@ -43,5 +43,12 @@ python main.py   --env_id walker2d-medium-v2 --alpha 2.5 --vae_weight 1.5 --devi
 ## See result
 
 ```bash
+
+tensorboard --logdir='Your output path'
+
+```
+### For example
+
+```bash
 tensorboard --logdir=result
 ```
