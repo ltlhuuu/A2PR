@@ -50,5 +50,7 @@ tensorboard --logdir='Your output path'
 ### For example
 
 ```bash
+
 tensorboard --logdir=result
+
 ```
