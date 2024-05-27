@@ -13,6 +13,11 @@ If you find this repository useful for your research, please cite:
     year={2024}
 }
 ```
+## Contents
+
+- [Install Dependency](#Install-dependency)
+- [Run Experiments](#Run-experiments)
+
 
 ## Install dependency
 Environment configuration and dependencies are available in `environment.yaml` and `requirements.txt`.
@@ -51,7 +56,7 @@ Then add the following line to `.bashrc`:
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.mujoco/mujoco210/bin
 ```
 
-## Running experiments
+## Run experiments
 In the following, you can use the illustrative examples to run the experiments.
 
 ```bash
@@ -62,7 +67,7 @@ python main.py   --env_id halfcheetah-medium-v2 --alpha 40.0 --vae_weight 1.0 --
 python main.py   --env_id walker2d-medium-v2 --alpha 2.5 --vae_weight 1.5 --device cuda:0 --mask 1.0 --discount 0.99 --seed 0
 ```
 
-## See result
+### See result
 
 ```bash
 tensorboard --logdir='Your output path'
