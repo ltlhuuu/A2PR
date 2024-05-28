@@ -14,10 +14,17 @@ If you find this repository useful for your research, please cite:
 }
 ```
 ## Contents
+- [Quick Start](#quick-start)
+- [Install Dependency](#install-dependency)
+- [Run Experiments](#run-experiments)
 
-- [Install Dependency](#Install-dependency)
-- [Run Experiments](#Run-experiments)
+## Quick start
+Clone this repository and navigate to A2PR folder.
 
+```bash
+git clone https://github.com/ltlhuuu/A2PR.git
+cd A2PR
+```
 
 ## Install dependency
 Environment configuration and dependencies are available in `environment.yaml` and `requirements.txt`.
@@ -60,11 +67,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.mujoco/mujoco210/bin
 In the following, you can use the illustrative examples to run the experiments.
 
 ```bash
-python main.py   --env_id hopper-medium-v2 --alpha 2.5 --vae_weight 1.0 --device cuda:0 --mask 0.4 --discount 0.995 --seed 0 
+python main.py --env_id hopper-medium-v2 --seed 0 --alpha 2.5 --vae_weight 1.0 --device cuda:0 --mask 0.4 --discount 0.995
 
-python main.py   --env_id halfcheetah-medium-v2 --alpha 40.0 --vae_weight 1.0 --device cuda:0 --mask 1.0 --discount 0.99 --seed 0 
+python main.py --env_id halfcheetah-medium-v2 --seed 0 --alpha 40.0 --vae_weight 1.0 --device cuda:0 --mask 1.0 --discount 0.99
 
-python main.py   --env_id walker2d-medium-v2 --alpha 2.5 --vae_weight 1.5 --device cuda:0 --mask 1.0 --discount 0.99 --seed 0
+python main.py --env_id walker2d-medium-v2 --seed 0 --alpha 2.5 --vae_weight 1.5 --device cuda:0 --mask 1.0 --discount 0.99
 ```
 
 ### See result
