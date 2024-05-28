@@ -67,9 +67,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.mujoco/mujoco210/bin
 In the following, you can use the illustrative examples to run the experiments.
 
 ```bash
-python main.py --env_id hopper-medium-v2 --seed 0 --alpha 2.5 --vae_weight 1.0 --device cuda:0 --mask 0.4 --discount 0.995
-
 python main.py --env_id halfcheetah-medium-v2 --seed 0 --alpha 40.0 --vae_weight 1.0 --device cuda:0 --mask 1.0 --discount 0.99
+
+python main.py --env_id hopper-medium-v2 --seed 0 --alpha 2.5 --vae_weight 1.0 --device cuda:0 --mask 0.4 --discount 0.995
 
 python main.py --env_id walker2d-medium-v2 --seed 0 --alpha 2.5 --vae_weight 1.5 --device cuda:0 --mask 1.0 --discount 0.99
 ```
