@@ -1,5 +1,7 @@
 # Adaptive Advantage-guided Policy Regularization for Offline Reinforcement Learning
 
+[![arXiv](https://img.shields.io/badge/arXiv-2405.19909-<COLOR>.svg)](https://arxiv.org/abs/2405.19909)
+
 This repo is the official implementation of ICML'24 paper "Adaptive Advantage-guided Policy Regularization for Offline Reinforcement Learning".
 
 If you find this repository useful for your research, please cite:
